@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendee Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <!-- Attendee dashboard: shows booking history and upcoming events -->
+  <div class="container py-5">
+    <h2 class="text-soft-blue">Welcome, <%= name %>!</h2>
+    <p>Your bookings:</p>
+    
+    <!-- Uses session data to retrieve user-specific information -->
+    <% if (bookings.length > 0) { %>
+      <ul class="list-group mb-4">
+        <% bookings.forEach(b => { %>
+          <li class="list-group-item">
+            <strong><%= b.title %></strong> on <%= b.date %> —
+            <%= b.full_tickets %> full, <%= b.concession_tickets %> concession
+          </li>
+        <% }) %>
+      </ul>
+    <!-- Displays message if no bookings are available -->
+    <% } else { %>
+      <p>You haven’t booked anything yet.</p>
+    <% } %>
+    <a href="/attendee" class="btn btn-themed">Back to homepage</a>
+    <a href="/attendee/logout" class="btn btn-danger">Logout</a>
+  </div>
+</body>
+</html>

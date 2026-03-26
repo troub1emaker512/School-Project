@@ -1,0 +1,153 @@
+/* Define styles */
+
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+}
+
+.role-button {
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 2rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Organiser Button Style */
+.organiser-btn {
+  background-color: #f5b3d8; /* richer cotton candy pink */
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #e69cc4;
+  border-radius: 20px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
+              0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.organiser-btn:hover {
+  background-color: #f3a0cd;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(243, 160, 205, 0.4);
+}
+
+/* Attendee Button Style */
+.attendee-btn {
+  background-color: #a3d2f7; /* soft sky blue */
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid #8ec6f5;
+  border-radius: 20px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
+              0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.attendee-btn:hover {
+  background-color: #7fc1f3; /* slightly deeper pastel blue */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(127, 193, 243, 0.4);
+}
+
+/* Organiser views styling */
+/* Themed Card Style */
+.organiser-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.organiser-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Tag / Label badge */
+.badge-pill {
+  border-radius: 10rem;
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+}
+
+/* Subtle header bar */
+.section-heading {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.text-soft-blue {
+  color: #45aeff; /* cotton-candy pastel blue */
+}
+
+/* Attendee views styling */
+.btn-soft {
+  background-color: #d0ebff;
+  border: 1px solid #74c0fc;
+  color: #1c7ed6;
+  transition: all 0.3s ease;
+}
+
+.btn-soft:hover {
+  background-color: #a5d8ff;
+  color: #1864ab;
+  transform: scale(1.05);
+}
+
+/* Themed Buttons */
+.btn-themed {
+  background-color: #a3d2f7;
+  color: #fff;
+  border: 1px solid #8ec6f5;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.btn-themed:hover {
+  background-color: #7fc1f3;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(127, 193, 243, 0.4);
+}
+
+/* Soft Red Alternate */
+.btn-soft-red {
+  background-color: #f8d0e7;
+  color: #c2255c;
+  border: 1px solid #faa2c1;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-soft-red:hover {
+  background-color: #f783ac;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Attendee card container */
+.attendee-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.custom-red-text {
+  color: #c2255c !important; 
+}

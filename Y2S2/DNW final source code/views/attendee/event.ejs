@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= event.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<!-- Individual event display page -->
+<!-- Shows event details and allows booking if tickets are available -->
+<body class="bg-light">
+  <!-- Displays an error if there are no tickets selected -->
+  <% if (error && error.trim().length > 0) { %>
+    <div class="alert alert-danger text-center" role="alert">
+      <%= error %>
+    </div>
+  <% } %>
+
+  <div class="container py-5">
+    <h1 class="text-soft-blue mb-1"><%= event.title %></h1>
+    <p class="mb-4 text-muted"><%= event.description %></p>
+
+    <div class="organiser-card">
+      <p><strong>Date:</strong> <%= event.date %></p>
+      <p><strong>Full Tickets:</strong> $<%= parseFloat(event.full_price).toFixed(2) %> — 
+         <%= event.full_remaining %> available</p>
+      <p><strong>Concession Tickets:</strong> $<%= parseFloat(event.concession_price).toFixed(2) %> — 
+         <%= event.concession_remaining %> available</p>
+      <!-- Ticket selection form -->
+       <!-- Submits the selected ticket type and event ID -->
+      <form action="/attendee/event/<%= event.id %>/book" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="full_tickets" class="form-label">Full Tickets</label>
+            <input type="number" id="full_tickets" name="full_tickets" class="form-control" value="0" min="0" max="<%= event.full_remaining %>">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="concession_tickets" class="form-label">Concession Tickets</label>
+            <input type="number" id="concession_tickets" name="concession_tickets" class="form-control" value="0" min="0" max="<%= event.concession_remaining %>">
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <a href="/attendee" class="btn btn-outline-secondary">Back</a>
+          <button type="submit" class="btn btn-success">Book Tickets</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
