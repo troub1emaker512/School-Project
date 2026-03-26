@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>p5.js Webcam Snapshot Example</title>
+    <script src="p5.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.12.2/dist/ml5.min.js"></script>
+
+    <!-- Link to separate scripts -->
+    <script src="sketch.js"></script>
+    <script src="processImage.js"></script>
+    <script src="splitChannels.js"></script>
+    <script src="thresholdImage.js"></script>
+    <script src="ConvertImage.js"></script>
+
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+
+  </head>
+ <!-- Main Sliders -->
+  <body>
+    <div style="position: absolute; top: 30px; left: 650px; min-width: 350px; min-height: 20px;">
+      <label>Red Threshold:</label>
+      <input type="range" id="redSlider" min="0" max="255" value="128">
+      <span id="redValue">128</span>
+    </div>
+    
+    <div style="position: absolute; top: 60px; left: 650px; min-width: 350px;">
+      <label>Green Threshold:</label>
+      <input type="range" id="greenSlider" min="0" max="255" value="128">
+      <span id="greenValue">128</span>
+    </div>
+
+    <div style="position: absolute; top: 90px; left: 650px; min-width: 350px; min-height: 20px;">
+      <label>Blue Threshold:</label>
+      <input type="range" id="blueSlider" min="0" max="255" value="128">
+      <span id="blueValue">128</span>
+    </div>
+    <!-- Single slider for HSV -->
+    <div style="position: absolute; top: 120px; left: 650px; min-width: 350px; min-height: 20px;">
+      <label>HSV Threshold:</label>
+      <input type="range" id="mergedHsvSlider" min="0" max="255" value="128">
+      <span id="mergedHsvValue">128</span>
+    </div>
+
+    <!-- Single slider for YCbCr -->
+    <div style="position: absolute; top: 150px; left: 650px; min-width: 350px; min-height: 20px;">
+      <label>YCbCr Threshold:</label>
+      <input type="range" id="mergedYcbcrSlider" min="0" max="255" value="128">
+      <span id="mergedYcbcrValue">128</span>
+    </div>
+    <!-- Extension: Sobel Edge detection -->
+    <div style="position: absolute; top: 180px; left: 650px;  min-width: 350px; min-height: 20px;">
+      <label>Sobel Edge Threshold:</label>
+      <input type="range" id="edgeSlider" min="0" max="255" value="100">
+      <span id="edgeValue">128</span>
+
+    </div>    
+    <!-- Extension -->
+     <!-- Sliders for HSV and YcbCr-->
+    <div style="position: absolute; top: 210px; left: 650px; background: #f9f9f9; 
+    padding: 10px; border-radius: 5px; min-width: 350px;">
+    <p style="font-weight: bold;">Extension sliders</p>
+    <p>Individual HSV Sliders:</p>
+    <div>
+      <label>Hue Threshold:</label>
+      <input type="range" id="hueSlider" min="0" max="255" value="128">
+      <span id="hueValue">128</span>
+    </div>
+    <div>
+      <label>Saturation Threshold:</label>
+      <input type="range" id="saturationSlider" min="0" max="255" value="128">
+      <span id="saturationValue">128</span>
+    </div>
+    <div>
+      <label>Value Threshold:</label>
+      <input type="range" id="valueSlider" min="0" max="255" value="128">
+      <span id="valueValue">128</span>
+    </div>
+
+    <p>Individual YCbCr Sliders:</p>
+    <div>
+      <label>Luma (Y):</label>
+      <input type="range" id="ySlider" min="0" max="255" value="128">
+      <span id="yValue">128</span>
+    </div>
+    <div>
+      <label>Cb:</label>
+      <input type="range" id="cbSlider" min="0" max="255" value="128">
+      <span id="cbValue">128</span>
+    </div>
+    <div>
+      <label>Cr:</label>
+      <input type="range" id="crSlider" min="0" max="255" value="128">
+      <span id="crValue">128</span>
+    </div>
+    </div>
+
+    <!-- Save images -->
+    <div style="position: absolute; top: 540px; left: 650px; min-width: 500px; min-height: 40px;">
+      <label for="saveDropdown">Select an image to save: </label>
+      <select id="saveDropdown">
+        <option value="canvas">All Images</option>
+        <option value="webcam">Webcam Image</option>
+        <option value="processed">Grayscale + Brightness Image</option>
+        <option value="edge">Sobel Edge Detection Image</option>
+        <option value="red">Red Channel Image</option>
+        <option value="green">Green Channel Image</option>
+        <option value="blue">Blue Channel Image</option>
+        <option value="thresh_red">Thresholded Red</option>
+        <option value="thresh_green">Thresholded Green</option>
+        <option value="thresh_blue">Thresholded Blue</option>
+        <option value="hsv">HSV Image </option>
+        <option value="ycbcr">YCbCr Image</option>
+        <option value="face">Face Detection Image</option>
+        <option value="thresh_hsv">Thresholded HSV</option>
+        <option value="thresh_ycbcr">Thresholded YCbCr</option>
+      </select>
+      
+      <button onclick="saveSelectedImage()">Save Image</button>
+    </div>
+    
+    <!-- Checkbox for mirroring the saved image -->
+    <div style="position: absolute; top: 570px; left: 650px; min-width: 350px; min-height: 40px;">
+      <label for="mirrorCheckbox">Mirror Image:</label>
+      <input type="checkbox" id="mirrorCheckbox">
+    </div>
+
+    <!-- Instuctions -->
+    <div style="position: absolute; top: 600px; left: 650px; background: #f8f8f8; padding: 10px; border-radius: 5px;  min-width: 350px; min-height: 20px;">
+      <h4>📢 Keystroke Guide:</h4>
+      <p><b>S</b> - Take a snapshot (Freeze Webcam)</p>
+      <p><b>R</b> - Resume Live Webcam & Reset Face Detection</p>
+      <p><b>1</b> - Apply **Greyscale** to Face Detection</p>
+      <p><b>2</b> - Apply **Blur** to Face Detection</p>
+      <p><b>3</b> - Apply **HSV Color Change** to Face Detection</p>
+      <p><b>4</b> - Apply **Pixelation** to Face Detection</p>
+      <p><b>D</b> - Save Full Canvas</p>
+    </div>
+  </body>
+</html>
