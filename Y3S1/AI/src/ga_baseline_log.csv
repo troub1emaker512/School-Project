@@ -1,0 +1,2 @@
+generation,max_fitness,mean_fitness,max_links,mean_links,best_peak_dist,mean_peak_dist,best_max_height,mean_max_height,best_air_ratio,mean_air_ratio,best_supported_ratio,mean_supported_ratio,motor_force,time_sec
+0,0.079135,0.061431,13,7.20,8.098,8.226,1.500,3.159,0.280,0.428,0.720,0.572,5.00,0.23
