@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.js"></script>
+
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="colourPalette.js"></script>
+    <script src="spectrumSelector.js"></script>
+
+    <script src="freehandTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+  
+    <script src="stampTool.js"></script>
+    <script src="editableShape.js"></script>
+    <script src="eraserTool.js"></script>
+    <script src="shapeTool.js"></script>
+    <script src="polygonTool.js"></script>
+    <script src="brushTool.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<div class="wrapper">
+      <div class="box header">My Drawing App
+
+        <button id="clearButton">Clear</button>
+        <button><label for="uploadImageButton">Upload Image</label></button>
+        <input type="file" accept="image/jpeg, image/png, image/jpg" id="uploadImageButton">    
+        <button id="saveImageButton">Save Image</button>
+        <button id="togglePaletteButton">Toggle Colour Palette</button> <!-- New button -->
+      </div>
+
+      <div class="box" id="sidebar"></div>
+      <div class="slidertext"></div>
+      <div id="content"></div>
+      
+      <div class="box colourPalette"></div>
+      <div class="box spectrumSelector"></div>
+
+      <div class="box options" id="options"></div>
+      
+    </div>
+    <script src="helperFunctions.js"></script>
+    
+  </body>
+</html>
+

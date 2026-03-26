@@ -1,0 +1,145 @@
+html, body {
+	font-family: Arial;
+	margin: 0px;
+	height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px 0;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-width: 50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display: flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+	z-index: 2;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+#options button{
+	margin: 10px;
+	height: 30px;
+	cursor: pointer;
+  	outline: none;
+  	color: #fff;
+  	background-color: plum;
+  	border: none;
+  	border-radius: 15px;
+  	box-shadow: 0 4px #999;
+}
+#options button:hover{
+	background-color: hotpink;
+}
+#options button:active{
+	
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 70px 230px  minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 160px;
+		grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+		background-color: #444;
+		color: #444;
+	}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 100%;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.slider-label {
+    margin-right: 10px; 
+	/* Adjust spacing as needed */
+}
+
+.header {
+  background-color: #999;
+}
+
+input{
+	display: none;
+}
+/* display the spectrum selector as a colour gradient */
+.spectrumSelector {
+    grid-area: colourP;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border: 1px black solid;
+	border-radius: 50%;
+    background: linear-gradient(to right, red, red, red, orange, yellow,limegreen,  limegreen, cyan, blue, purple);
+    top: 35px; /*Align with the existing palette */
+    left: 0;
+    width: 99%;
+    z-index: 1; /* Ensure it's behind the palette */
+}
+/* styling and reaction animations for shape buttons */
+.shape-button{
+	margin: 0 10px;
+	height: 30px;
+	cursor: pointer;
+  	outline: none;
+  	color: #fff;
+  	background-color: plum;
+  	border: none;
+  	border-radius: 15px;
+  	box-shadow: 0 4px #999;
+}
+.shape-button:hover{
+	background-color: hotpink;
+}
+.shape-button:active{
+	
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
