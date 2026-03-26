@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+    <!-- This head section contains all the invisible information about the page -->
+    <head>
+        <title>Doraemon SkyWorld - Park Map and Directions</title>
+        <meta charset="utf-8">
+        <meta name="description" content="'Doraemon SkyWorld' Park Map and Directions.">
+        <meta name="author" content="WD Team 100">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Doraemon, skyworld, theme park, map, directions">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="topNav.js"></script>
+        <script src="mapHover.js" ></script>
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="mid"><img src="assets/images/wordLogo1.png" alt="Doraemon Word Logo" style="width:430px;height:112px;">SkyWorld</a>
+            <a class="blankLeft">Buy TicketsFAQContact Us</a>
+            <a href="map.html" class="left">Park Map</a>
+            <a href="map.html#directions">Directions</a>   
+            <a class="blankRight">Park MapDirections</a>
+            <a href="ticket.html" class="split right">Buy Tickets</a>
+            <a href="index.html#faq" class="split">FAQ</a>
+            <a href="index.html#footer" class="split">Contact Us</a>
+            <a href="javascript:topNav.js;" class="icon" onclick="TopNav()">&#9776;</a>
+        </div>   
+    </body>
+
+    <!-- This is for future development usage -->
+    <div class="parkmap">
+        <div class="map">
+            <img src="assets/images/parkMap.png" alt="Park map" usemap="#park" style="width: 100%;">
+            <map name="park">
+            <area shape="circle" coords="521,141,20" alt="Point A" id="PointA" 
+            onmouseenter="showImage('PointA', 'assets/images/rs_skyshipRide.jpg')"
+            onmouseleave="hideImage('PointA')"
+            >
+            <area shape="circle" coords="1045,304,20" alt="Point B" id="PointB" 
+            onmouseenter="showImage('PointB', 'assets/images/rs_timeMachineRide.jpg')"
+            onmouseleave="hideImage('PointB')">
+            <area shape="circle" coords="828,232,20" alt="Point C" id="PointC" 
+            onmouseenter="showImage('PointC', 'assets/images/rs_boatRide.jpg')"
+            onmouseleave="hideImage('PointC')">
+            <area shape="circle" coords="448,194,20" alt="Point D" id="PointD" 
+            onmouseenter="showImage('PointD', 'assets/images/rs_gadgetMuseum.jpg')"
+            onmouseleave="hideImage('PointD')">
+            <area shape="circle" coords="234,545,20" alt="Point E" id="PointE" 
+            onmouseenter="showImage('PointE', 'assets/images/rs_shizukaGarden.jpg')"
+            onmouseleave="hideImage('PointE')">
+            <area shape="circle" coords="960,72,20" alt="Big G" id="BigG" 
+            onmouseenter="showImage('BigG', 'assets/images/rs_carRide.jpg')"
+            onmouseleave="hideImage('BigG')">
+            <area shape="circle" coords="562,310,20" alt="Magic Show" id="MagicShow" 
+            onmouseenter="showImage('MagicShow', 'assets/images/rs_illumillion.png')"
+            onmouseleave="hideImage('MagicShow')">
+            <area shape="circle" coords="742,107,20" alt="Shops" id="Shops" 
+            onmouseenter="showImage('Shops', 'assets/images/rs_shop.jpg')"
+            onmouseleave="hideImage('Shops')">
+            <area shape="circle" coords="294,266,20" alt="Snack Bar" id="SnackBar" 
+            onmouseenter="showImage('SnackBar', 'assets/images/rs_dorayaki.png')"
+            onmouseleave="hideImage('SnackBar')">
+            </map>
+        </div>
+
+    
+    <!-- This is for future development usage -->
+        
+    <div id="directions" class="maprow">
+        <div class="map">
+            <img src="assets/images/mountMyoko.jpg" alt="map" style="width: 100%;">
+        </div>
+
+        <div class="directions">
+            <h1>Directions to Doraemon SkyWorld</h1>
+        </div>
+
+        <div class="transport">
+            <h3>By shuttle bus</h3> 
+            <p><h5>Operating hours are from 9am to 7pm. Shuttle buses will arrive at the designated Metro stations every 30 minutes.</h5></p>
+            <ul>
+                <li>Take from Shinano station exit A which takes you about 30 minutes.</li>
+                <li>Take from Lizuna station exit C which takes you about 45 minutes.</li>
+                <li>Take from Otari station exit B which takes you about 60 minutes.</li>
+              </ul>
+        </div>
+
+        <div class="transport">
+            <h3>By Tongakushi-Jinja</h3> 
+            <p>Tongakushi-Jinja offers one of the most scenic cable car rides up to Doraemon theme park. Along the 15 minute ride, you can catch a beautiful scenery of mountains up to Doraemon theme park 
+                or you may alight and walk all the way up from Mount Tongakushi or Mount Takatsuma to enjoy the cooling breeze of the nature.
+                You can also get off at Myoko-Tongakushi Renzan National Park to explore the beautiful flowers and heritage villages that are over 100 years.
+            </p>
+        </div>
+    </div>
+    <br>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Contact Section -->
+            <div class="section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Theme Park Road, Fun City, FC 12345</p>
+                <p><i class="fas fa-phone-alt"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> doraemonskyworld@jp.com</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html#fpintroTitle">Events</a>
+                <a href="ticket.html">Tickets</a>
+                <a href="map.html">Park Map</a>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="section social-media">
+                <h4>Follow Us</h4>
+                <div class="flex-container">
+                    <div>
+                        <a href="https://www.facebook.com/">
+                            <img src="assets/images/facebooklogo.png" height="100" width="100">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/">
+                            <img src="assets/images/Instagramlogo.webp"height="100" width="100">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com/">
+                            <img src="assets/images/tiktoklogo.png"height="100" width="100">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/">
+                            <img src="assets/images/youtubelogo.webp"height="100" width="100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>For any inquiries, you can reach Doraemon SkyWorld Guest Services via email at doraemonskyworld@jp.com or visit the Guest Services desk inside the park.</p>  
+            <p>&copy; 2024 Doraemon Theme Park. All rights reserved.</p>
+        </div>  
+    </footer>
+</html>

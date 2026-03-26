@@ -1,0 +1,760 @@
+/*Custom Fonts-------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+/*Common CSS-------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    z-index: 0;
+    position: static;
+    font-family: Verdana, sans-serif;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center image */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Container holding the image and the text */
+.containerImgText {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Topnav CSS-------------------------------------*/
+
+/* Add a background to the top navigation */
+.topnav {
+    z-index:1;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    border-radius: 25px;
+    background-image: url(assets/images/background1.jpeg);
+    background-blend-mode: soft-light;
+    animation: navBg 5s infinite;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    overflow: hidden;
+}
+
+@keyframes navBg {
+    50% {
+        background-image: url(assets/images/background1.jpeg);
+        background-color: rgba(255,255,255,0.2);
+        background-blend-mode: soft-light;
+    }
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    border-radius:10px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 2px 2px 4px #000000;
+    transition: box-shadow 0.3s ease; 
+}
+
+/* Create a left blank space inside the navigation bar */
+.topnav a.blankLeft {
+    color: transparent; /* make the text invisible */
+    text-shadow: none;
+    user-select: none; /* prevent selection of the text */
+}
+
+/* Create a right blank space inside the navigation bar */
+.topnav a.blankRight {
+    float: right;
+    color: transparent; /* make the text invisible */
+    text-shadow: none;
+    user-select: none; /* prevent selection of the text */
+}
+
+/* Create a center link inside the navigation bar */
+.topnav a.mid {
+    display: block;
+    float: none;
+    margin-left: auto;
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+    float: right;
+}
+
+.topnav a.right {
+    border-radius: 15px 45px 30px 5px;
+}
+
+.topnav a.left {
+    border-radius: 45px 15px 5px 30px;
+}
+.topnav a:not(.blankLeft):not(.blankRight):not(.mid) {
+    border: 2px solid white;
+    background-color: #004680;
+}
+
+/* Change the color of links on hover */
+.topnav a:not(.blankLeft):not(.blankRight):not(.mid):hover {
+    background-color: #4DAFFF;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6); 
+    padding: 15px 15px;
+    font-size: 18px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 1050 pixels wide, hide all links, except for the active one. Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1050px) {
+    .topnav a:not(.mid) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1050px) {
+    .topnav.responsive {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a:not(.blankLeft):not(.blankRight) {
+        float: none;
+        display: block;
+        text-align: center;
+        border-radius:0px;
+        background-color: rgb(97,167,237,0.5);
+    }
+}
+
+body{
+    background-image: radial-gradient(rgba(234, 246, 248,0.7), rgba(169, 215, 230,0.5), rgba(97, 167, 237,0.5));
+    background-attachment: fixed;
+
+}
+
+
+h1{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 2em;
+    color: black;
+}
+
+h2{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 20px;;
+    color: black;
+}
+
+h3{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 17px;;
+    color: black;
+}
+
+p{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 15px;;
+    color: black;
+}
+
+/*Header CSS---------------------------------------*/
+
+header{
+    display: none;
+}
+
+/*Index.html CSS------------------------------------*/
+
+#fpintroTitle p{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 25px;;
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+.homeColumn {
+    float: left;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+}
+
+.homeLeft {
+    width: 33%;
+}
+
+.homeMiddle {
+    width: 33%;
+    background-color: azure;
+    border: 3px solid darkblue;
+}
+
+.homeRight {
+    width: 33%;
+}
+
+/* Clear floats after the columns */
+.homeRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 1050px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1050px) {
+    .homeColumn {
+        width: 100%;
+    }
+}
+
+/* -----Slideshow container----- */
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    background-color: rgba(0, 70, 128,0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 25px 25px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 25px 0 0 25px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: white;
+    color: rgb(1, 141, 255);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    background-color: rgba(0,0,0,0.8);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.buyText {
+    width:40%;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+    font-size: 18px;
+    font-size: 1.1vi;
+    top: 35%;
+    left: 37%;
+    border: none;
+    transform-origin: left;
+    transform: perspective(50px) rotateY(-4deg);
+    -webkit-animation: blinker 2s infinite  alternate;
+    animation: blinker 2s infinite  alternate;
+}
+
+@media screen and (max-width: 1050px) {
+    .buyText {
+        font-size: 3vi;
+    }
+}
+
+.buyTickets {
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@-webkit-keyframes blinker {
+    0% { text-shadow: 0 0 1px darkgray; }
+    100% { text-shadow: 0 0 15px white; }
+}
+@keyframes blinker {
+    0% { text-shadow: 0 0 1px darkgray; }
+    100% { text-shadow: 0 0 15px white; }
+}
+
+.openingHoursList {
+    text-align: center;
+    font-size: 18px;
+}
+
+.openingHoursList .small {
+    font-size:15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* -----Calendar container----- */
+
+.calendar-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 2px solid rgba(0, 70, 128,0.3);
+    cursor: default;
+}
+
+.month {
+    padding: 10px 25px;
+    background: rgba(0, 70, 128,0.8);
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.weekdays {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px;
+    background-color: rgba(77, 175, 255,0.2);
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 10px;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px 10px;
+    background: rgba(0, 112, 204,0.9);
+    color: white;
+}
+
+@media screen and (max-width: 1050px) {
+    .weekdays li, .days li {width: 12.5%;}
+}
+
+/* -----Things to do (ttd) container----- */
+
+.ttd-container {
+    margin: auto;
+    width: 80%;
+}
+
+.ttdRow {
+    margin: auto;
+    width: 100%;
+}
+
+/* Add padding BETWEEN each column */
+.ttdRow,
+.ttdRow > .ttdColumn {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.ttdColumn {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.ttdRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.ttdContent {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.ttdBtn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.ttdBtn:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.ttdBtn.active {
+    background-color: #666;
+    color: white;
+}
+
+@media screen and (max-width: 1050px) {
+    .ttdColumn {width: 100%;}
+}
+
+/* -----FAQs container----- */
+
+#faq img{
+    display:block;
+    width:40%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1050px) {
+    #faq img {width: 70%;}
+}
+@media screen and (max-width: 800px) {
+    #faq img {width: 100%;}
+}
+
+.faqs {
+    margin: auto;
+    width: 90%;
+}
+
+.faqCard {
+    display: block;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(38, 87, 128,0.1);
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 8px;
+}
+
+.faqCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#faq {
+    display: block;
+    padding: 50px;
+}
+
+#contactUs {
+    text-align: center;
+}
+
+
+/*Map and Direction*/
+
+.maprow{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;  
+    flex-flow: column;
+    max-width: 700px;
+}
+.transport{
+    text-align: left;
+}
+
+.parkmap{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;  
+    flex-flow: column;
+    max-width: 1321px;
+}
+
+  /* Container styling */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Left and right side styling */
+.left-side, .right-side {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Catalogue block styling */
+.catalogue {
+    width: 100%;
+    background-color: #f4f4f4; /* Example background color */
+    padding: 20px;
+    margin-top: 20px; /* Example spacing */
+}
+
+/* Grid styling for ticket types and promotions */
+.grid {
+    display: flex;
+    gap: 20px;
+}
+
+.ticket, .promo {
+    flex: 1;
+    padding: 20px;
+    background-color: #e2e2e2; /* Example background color */
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 5px; /* Example border radius */
+}
+
+
+/* Form styling */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label, input, select {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: auto;
+    align-self: flex-start;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.catalogue {
+    /* Full width catalogue block */
+    width: 100%;
+    background-color: #f4f4f4; /* Light grey background for the catalogue section */
+    padding: 20px;
+    margin-top: 20px; /* Spacing above the catalogue section */
+}
+
+.grid {
+    /* Flexbox grid for ticket types */
+    display: flex;
+    gap: 20px; /* Space between grid items */
+}
+
+.ticket, .promo {
+    /* Styling for individual tickets and promotions */
+    flex: 1; /* Equal flex grow */
+    padding: 20px;
+    background-color: #e2e2e2; /* Light grey background for tickets and promotions */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Promotion blocks */
+.promotions {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+/* footer */
+
+.flex-container{
+    display: flex;
+}
+.footer{
+    background: #18293a;
+    color: #fff;
+    padding: 40px ;
+    border-radius: 25px;
+    text-align: center;
+
+}
+.footer .footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer .footer-content .section{
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+.footer .footer-content .section h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer .footer-content .section p, 
+.footer .footer-content .section a{
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+.footer .footer-content .section a:hover{
+    color: #fff;
+}
+.footer .footer-content .social-media a{
+    /* margin: 0 10px; */
+    color: #ddd;
+}
+.footer .footer-content .social-media a:hover{
+    color: #fff;
+    padding: 10;
+}
+.footer .footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+}
+.footer .footer-bottom p{
+    margin: 0;
+    color: #fff;
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Doraemon SkyWorld - Home</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Official website for 'Doraemon SkyWorld' theme park.">
+        <meta name="author" content="WD Team 100">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Doraemon, skyworld, theme park">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="topNav.js"></script>
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="mid"><img src="assets/images/wordLogo1.png" alt="Doraemon Word Logo" style="width:430px;height:112px;">SkyWorld</a>
+            <a class="blankLeft">Buy TicketsFAQContact Us</a>
+            <a href="map.html" class="left">Park Map</a>
+            <a href="map.html#directions">Directions</a>   
+            <a class="blankRight">Park MapDirections</a>
+            <a href="ticket.html" class="split right">Buy Tickets</a>
+            <a href="index.html#faq" class="split">FAQ</a>
+            <a href="index.html#footer" class="split">Contact Us</a>
+            <a href="javascript:topNav.js;" class="icon" onclick="TopNav()">&#9776;</a>
+        </div>    
+
+        <div class="homeRow">
+            <div class="homeColumn homeLeft">
+                <div id="fpintroTitle">
+                    <p>What's On</p>
+                </div>
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="assets/images/sq_happyBirthdayBanner.jpg" style="width:100%; border-radius: 8px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+                        <div class="text">Join us in celebrating Doraemon's special month with exciting promotions and events throughout September!</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="assets/images/sq_cableCar.jpg" style="width:100%; border-radius: 8px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+                        <div class="text">Experience the ultimate adventure with our <b>Fly&amp;Play Combo</b>! Enjoy a scenic cable car ride to Doraemon SkyWorld with our latest deal.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="assets/images/sq_illumillion1.png" style="width:100%; border-radius: 8px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+                        <div class="text"><b>Doraemon Light Up the World Illumillion</b>: Experience the nighttime dazzling wonderland of lights and colours!</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                <script src="slideShow.js"></script>
+            </div>
+            <div class="homeColumn homeMiddle">
+                <div id="fpintroTitle">
+                    <p>Doraemon SkyWorld</p>
+                </div>
+                <div>
+                    <p>Doraemon SkyWorld is the world's first and only elevated Doraemon theme park. </p>
+                    <p>Explore the magical world of Doraemon and enjoy a day filled with fun, adventure and nostalgia. Doraemon SkyWorld brings your favourite characters to life through exciting rides, interactive exhibits and captivating attractions.</p>
+                </div>
+                <div class="buyTickets containerImgText">
+                    <br>
+                    <br>
+                    <a href="ticket.html">
+                        <img src="assets/images/friendsDoor.png" alt="Buy tickets button" style="width:40%;">
+                        <div class="buyText centered">Buy<br>Tickets</div>
+                    </a>
+                </div>
+            </div>
+            <div class="homeColumn homeRight">
+                <div id="fpintroTitle">
+                    <p>Opening Hours</p>
+                </div>
+                <div>
+                    <ul class="openingHoursList">
+                        <li><b>SkyWorld</b></li>
+                        <li>Daily: 10am – 6pm</li>
+
+                        <br>
+                        <li><b>Light Up the World Illumillion</b></li>
+                        <li>Fri – Sun: 8pm – 10pm</li>
+                        <br>
+                        <li class="small">Closed every Thursday except Japan public holidays and school holidays</li>
+                        <br>
+                    </ul>
+                </div>
+                <!-- Calendar container -->
+                <div class="calendar-container">
+                    <div class="month">      
+                        <ul>
+                            <li>
+                                September<br>
+                                <span style="font-size:18px">2024</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="weekdays">
+                        <li>Mo</li>
+                        <li>Tu</li>
+                        <li>We</li>
+                        <li>Th</li>
+                        <li>Fr</li>
+                        <li>Sa</li>
+                        <li>Su</li>
+                    </ul>
+                    <ul class="days">  
+                        <li>1</li>
+                        <li>2</li>
+                        <li><span class="active">3</span></li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="thingsToDo">
+            <div id="fpintroTitle">
+                <p>Things To Do</p>
+            </div>
+            <div class="ttd-container">
+                <div id="ttdFilter">
+                    <button class="ttdBtn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="ttdBtn" onclick="filterSelection('showsExhibits')"> Shows and Exhibits</button>
+                    <button class="ttdBtn" onclick="filterSelection('rides')"> Rides</button>
+                    <button class="ttdBtn" onclick="filterSelection('shopDine')"> Shop and Dine</button>
+                </div>
+
+                <!-- Portfolio Gallery Grid -->
+                <div class="ttdRow">
+                    <div class="ttdColumn rides">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_skyshipRide.jpg" alt="Sky ship ride" style="width:100%;">
+                            <h4>Sky Ship Adventure</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn shopDine">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_shop.jpg" alt="Shops" style="width:100%;">
+                            <h4>Doraemon Future Store</h4>
+                        </div>
+                    </div>                    
+                    <div class="ttdColumn showsExhibits">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_dorami.png" alt="Dorami's magic show" style="width:100%">
+                            <h4>Dorami's Science Lab</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn showsExhibits">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_dinosaur.png" alt="Dinosaur park" style="width:100%">
+                            <h4>Dinosaur Park</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn rides">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_timeMachineRide.jpg" alt="Time machine ride" style="width:100%">
+                            <h4>Time Machine Ride</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn shopDine">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_dorayaki.png" alt="Food Dorayaki" style="width:100%;">
+                            <h4>Dorayaki Snackbar</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn showsExhibits">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_friendsHome.png" alt="Doraemon and friends exhibit" style="width:100%">
+                            <h4>Nobita's Neighbourhood</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn showsExhibits">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_gadgetMuseum.jpg" alt="Gadget museum" style="width:100%">
+                            <h4>Gadget Museum</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn rides">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_carRide.jpg" alt="Car ride" style="width:100%">
+                            <h4>Big G Roller Coaster</h4>
+                        </div>
+                    </div>                
+                    <div class="ttdColumn shopDine">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_restaurant.jpg" alt="Restaurant" style="width:100%;">
+                            <h4>Stars Restaurant</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn rides">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_boatRide.jpg" alt="Boat ride" style="width:100%">
+                            <h4>River Splash Adventure</h4>
+                        </div>
+                    </div>
+                    <div class="ttdColumn showsExhibits">
+                        <div class="ttdContent">
+                            <img src="assets/images/rs_shizukaGarden.jpg" alt="Shizuka's tea garden" style="width:100%">
+                            <h4>Shizuka's Tea Garden</h4>
+                        </div>
+                    </div>
+                    <!-- END GRID -->
+                </div>
+            </div>
+            <script src="ttd.js"></script>
+        </div>
+        <div id="faq"><img src="assets/images/doraemonRat.gif" alt="Doraemon sees rat"></div>
+        <div class="faqs">
+            <div id="fpintroTitle">
+                <p>FAQs</p>
+            </div>
+            <div class="faqCard">
+                <h3>Can I purchase tickets on the day of my visit?</h3> 
+                <p>Yes, but please note that tickets are subject to availability.<br>You may book your tickets <a href="ticket.html">here</a>. It is also advisable to check on the park's operating hours on the day of your visit.</p> 
+            </div>
+            <div class="faqCard">
+                <h3>Are there any height or age restrictions for rides?</h3> 
+                <p>Yes, some rides have specific height and age requirements for safety.<br>Please refer to individual ride guidelines available at the park or on our website.</p> 
+            </div>
+            <div class="faqCard">
+                <h3>Are there facilities for guests with disabilities?</h3> 
+                <p>Yes, Doraemon SkyWorld is committed to providing an enjoyable experience for all guests. We offer accessible facilities and services.<br>Please contact Guest Services for assistance.</p> 
+            </div>
+            <div class="faqCard">
+                <h3>Is there a dress code?</h3> 
+                <p>Yes, appropriate attire is required. Guests should dress comfortably and modestly.<br>Offensive clothing or costumes that may be mistaken for park personnel are not permitted.</p> 
+            </div>
+            <div class="faqCard">
+                <h3>Can I bring my own food and beverages into the park?</h3> 
+                <p>No, outside food and beverages are not allowed in the park.<br>We offer a variety of dining options to cater to different tastes and dietary needs.</p> 
+            </div>
+            <div class="faqCard">
+                <h3>What should I do if I lose something in the park?</h3> 
+                <p>Visit the Lost and Found located at Guest Services.<br>You can also report lost items online or contact us via email.</p> 
+            </div>
+            <div class="faqCard">
+                <h3>Is re-entry allowed?</h3> 
+                <p>Yes, re-entry is permitted on the same day with a valid ticket.<br>Please ensure your ticket is scanned upon exit and re-entry.</p> 
+            </div>
+        </div>
+        <br><br>
+
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+        <div id = "footer"></div>
+            <!-- Contact Section -->
+            <div class="section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Theme Park Road, Fun City, FC 12345</p>
+                <p><i class="fas fa-phone-alt"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> doraemonskyworld@jp.com</p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html#fpintroTitle">Events</a>
+                <a href="ticket.html">Tickets</a>
+                <a href="map.html">Park Map</a>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="section social-media">
+                <h4>Follow Us</h4>
+                <div class="flex-container">
+                    <div>
+                        <a href="https://www.facebook.com/">
+                            <img src="assets/images/facebooklogo.png" height="100" width="100">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/">
+                            <img src="assets/images/Instagramlogo.webp"height="100" width="100">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com/">
+                            <img src="assets/images/tiktoklogo.png"height="100" width="100">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/">
+                            <img src="assets/images/youtubelogo.webp"height="100" width="100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>For any inquiries, you can reach Doraemon SkyWorld Guest Services via email at doraemonskyworld@jp.com or visit the Guest Services desk inside the park.</p>  
+            <p>&copy; 2024 Doraemon Theme Park. All rights reserved.</p>
+        </div>  
+    </footer>
+    </body>
+</html>
