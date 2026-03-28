@@ -25,4 +25,4 @@ Unity-based 3D project work, including separate Tennis and Volleyball environmen
 A Python-based artificial intelligence project with modules for creatures, genomes, populations, simulation, testing, and plotting. This appears to focus on evolutionary or simulation-driven experimentation.
 
 ### 9. ML
-A machine learning coursework submission containing a final report and exported HTML notebook.
+Built a machine learning project on the Iris dataset to compare kNN and Decision Tree classifiers. I implemented kNN from scratch, carried out feature scaling, hyperparameter tuning and stratified cross-validation, then assessed model performance using classification metrics and confusion matrix analysis.
