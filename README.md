@@ -25,14 +25,14 @@ The project includes:
 ### 7. Calculator
 This project is a scientific calculator web application built with HTML, CSS and JavaScript. It allows users to perform both basic arithmetic and scientific operations through a simple browser-based interface, with the calculation logic handled in JavaScript and the layout styled using CSS. The project also includes basic testing with Jest, showing an understanding of both front end development and function validation.
 
-### 7. DNW Final Source Code
+### 8. DNW Final Source Code
 An event manager web application using Node.js, Express, EJS, sessions, and SQLite. It supports organiser and attendee flows, authentication, and booking functionality.
 
-### 8. 3D Graphics & Animation
+### 9. 3D Graphics & Animation
 Unity-based 3D project work, including separate Tennis and Volleyball environments, along with supporting reports and submission files.
 
-### 9. AI
+### 10. AI
 A Python-based artificial intelligence project with modules for creatures, genomes, populations, simulation, testing, and plotting. This appears to focus on evolutionary or simulation-driven experimentation.
 
-### 10. ML
+### 11. ML
 Built a machine learning project on the Iris dataset to compare kNN and Decision Tree classifiers. I implemented kNN from scratch, carried out feature scaling, hyperparameter tuning and stratified cross-validation, then assessed model performance using classification metrics and confusion matrix analysis.
