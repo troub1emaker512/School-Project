@@ -22,6 +22,9 @@ The project includes:
 - filtering of data by year and temperature range
 - simple polynomial-based prediction of future average temperatures
 
+### 7. Calculator
+This project is a scientific calculator web application built with HTML, CSS and JavaScript. It allows users to perform both basic arithmetic and scientific operations through a simple browser-based interface, with the calculation logic handled in JavaScript and the layout styled using CSS. The project also includes basic testing with Jest, showing an understanding of both front end development and function validation.
+
 ### 7. DNW Final Source Code
 An event manager web application using Node.js, Express, EJS, sessions, and SQLite. It supports organiser and attendee flows, authentication, and booking functionality.
 
