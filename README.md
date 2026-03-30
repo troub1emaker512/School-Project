@@ -15,14 +15,21 @@ An image-processing coursework project built in JavaScript with p5.js. The file 
 ### 5. Snooker Code
 A browser-based snooker game built with p5.js and Matter.js, combining rendering, game interaction, and physics simulation.
 
-### 6. DNW Final Source Code
+### 6. Weather Data Analysis in C++
+The project includes:
+- yearly candlestick data generation using open, close, high and low values
+- text-based visualisation of temperature trends in the terminal
+- filtering of data by year and temperature range
+- simple polynomial-based prediction of future average temperatures
+
+### 7. DNW Final Source Code
 An event manager web application using Node.js, Express, EJS, sessions, and SQLite. It supports organiser and attendee flows, authentication, and booking functionality.
 
-### 7. 3D Graphics & Animation
+### 8. 3D Graphics & Animation
 Unity-based 3D project work, including separate Tennis and Volleyball environments, along with supporting reports and submission files.
 
-### 8. AI
+### 9. AI
 A Python-based artificial intelligence project with modules for creatures, genomes, populations, simulation, testing, and plotting. This appears to focus on evolutionary or simulation-driven experimentation.
 
-### 9. ML
+### 10. ML
 Built a machine learning project on the Iris dataset to compare kNN and Decision Tree classifiers. I implemented kNN from scratch, carried out feature scaling, hyperparameter tuning and stratified cross-validation, then assessed model performance using classification metrics and confusion matrix analysis.
