@@ -22,17 +22,20 @@ The project includes:
 - filtering of data by year and temperature range
 - simple polynomial-based prediction of future average temperatures
 
-### 7. Calculator
+### 7. Python Data Analysis
+A Python-based data analysis project comparing road traffic accident data from Singapore and the United States. Python was used with libraries such as pandas, BeautifulSoup and Matplotlib for data collection, cleaning, processing and visualisation.
+
+### 8. Calculator
 This project is a scientific calculator web application built with HTML, CSS and JavaScript. It allows users to perform both basic arithmetic and scientific operations through a simple browser-based interface, with the calculation logic handled in JavaScript and the layout styled using CSS. The project also includes basic testing with Jest, showing an understanding of both front end development and function validation.
 
-### 8. DNW Final Source Code
+### 9. DNW Final Source Code
 An event manager web application using Node.js, Express, EJS, sessions, and SQLite. It supports organiser and attendee flows, authentication, and booking functionality.
 
-### 9. 3D Graphics & Animation
+### 10. 3D Graphics & Animation
 Unity-based 3D project work, including separate Tennis and Volleyball environments, along with supporting reports and submission files.
 
-### 10. AI
+### 11. AI
 A Python-based artificial intelligence project with modules for creatures, genomes, populations, simulation, testing, and plotting. This appears to focus on evolutionary or simulation-driven experimentation.
 
-### 11. ML
+### 12. ML
 Built a machine learning project on the Iris dataset to compare kNN and Decision Tree classifiers. I implemented kNN from scratch, carried out feature scaling, hyperparameter tuning and stratified cross-validation, then assessed model performance using classification metrics and confusion matrix analysis.
